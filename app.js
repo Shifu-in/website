@@ -2,6 +2,22 @@ document.getElementById('mineButton').addEventListener('click', async () => {
     // Проверка наличия MetaMask
     if (typeof window.ethereum !== 'undefined') {
         try {
+            // Запрос на переключение сети на Binance Smart Chain
+            await window.ethereum.request({
+                method: 'wallet_addEthereumChain',
+                params: [{
+                    chainId: '0x38',
+                    chainName: 'Binance Smart Chain',
+                    nativeCurrency: {
+                        name: 'Binance Coin',
+                        symbol: 'BNB',
+                        decimals: 18
+                    },
+                    rpcUrls: ['https://bsc-dataseed.binance.org/'],
+                    blockExplorerUrls: ['https://bscscan.com/']
+                }]
+            });
+
             // Запрос на подключение к MetaMask
             await window.ethereum.request({ method: 'eth_requestAccounts' });
 
