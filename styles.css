@@ -11,6 +11,11 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -24,4 +29,9 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+#countdown {
+    margin-top: 20px;
+    font-size: 20px;
 }
