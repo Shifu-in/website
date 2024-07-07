@@ -1,0 +1,5 @@
+# Node modules directory
+node_modules/
+
+# Dist directory for build outputs
+dist/
